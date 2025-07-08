@@ -34,8 +34,6 @@ facial-occlusion-unet/
 └── README.md # This documentation
 
 yaml
-Copy
-Edit
 
 ---
 
@@ -47,31 +45,21 @@ Edit
 git clone https://github.com/shyamlaljs/facial-occlusion-unet.git
 cd facial-occlusion-unet
 2. Create a Virtual Environment (Optional)
-bash
-Copy
-Edit
 python -m venv venv
 venv\Scripts\activate     # On Windows
 source venv/bin/activate  # On macOS/Linux
 3. Install Required Libraries
-bash
-Copy
-Edit
 pip install -r requirements.txt
 🗂️ Dataset Structure
 Update the dataset path in your code:
 
 python
-Copy
-Edit
 BASE_PATH = r"C:\NNDL"
 MASK_PATH = os.path.join(BASE_PATH, "Image Mask")
 ORIGINAL_PATH = os.path.join(BASE_PATH, "Surgical Masked Image")
 Make sure your data is stored like this:
 
 mathematica
-Copy
-Edit
 C:\NNDL\
 ├── Surgical Masked Image\
 │   ├── img1.jpg
@@ -82,9 +70,6 @@ C:\NNDL\
     ├── img2.jpg
     └── ...
 🧪 Running the Model
-bash
-Copy
-Edit
 python unet_occlusion_segmentation.py
 The model will:
 
@@ -109,16 +94,12 @@ Display predictions using Matplotlib
 
 📄 requirements.txt
 txt
-Copy
-Edit
 numpy
 tensorflow
 matplotlib
 scikit-learn
 🙈 .gitignore
 gitignore
-Copy
-Edit
 __pycache__/
 *.pyc
 *.h5
